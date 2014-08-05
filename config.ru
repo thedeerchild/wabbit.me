@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
  
-require './lib/wabbit'
+require './wabbit'
  
 run Pumatra
