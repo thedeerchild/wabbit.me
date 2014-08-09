@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :application, "wabbit.me"
 set :repository,  "git@github.com:thedeerchild/wabbit.me.git"
 
