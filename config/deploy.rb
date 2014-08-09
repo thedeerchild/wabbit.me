@@ -25,10 +25,10 @@ set :puma_pid, "#{deploy_to}/tmp/puma/pid"
 
 namespace :deploy do
   task :restart do
-    run "if [ -f #{puma_pid} ]; then kill -USR2 `cat #{puma_pid}`; else cd #{deploy_to}/current && bundle exec puma --config #{puma_conf} -D; fi"
+    run "if [ -f #{puma_pid} ]; then kill -USR2 `cat #{puma_pid}`; else cd #{deploy_to}/current && bundle exec puma --config #{puma_conf} --daemon; fi"
   end
   task :start do
-    run "cd #{deploy_to}/current && bundle exec puma --config #{puma_conf} -D"
+    run "cd #{deploy_to}/current && bundle exec puma --config #{puma_conf} --daemon"
   end
   task :stop do
     run "if [ -f #{puma_pid} ]; then kill -QUIT `cat #{puma_pid}`; fi"
