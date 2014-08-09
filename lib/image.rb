@@ -1,4 +1,4 @@
-require 'rmagick'
+require 'RMagick'
 include Magick
 
 def generate_image width, height, color, text, format
