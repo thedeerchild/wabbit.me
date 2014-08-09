@@ -21,7 +21,7 @@ role :app, host
 
 set :deploy_to, "/home/#{user}/#{application}"
 set :puma_conf, "#{deploy_to}/current/config/puma.rb"
-set :puma_pid, "#{deploy_to}/tmp/puma/pid"
+set :puma_pid, "#{deploy_to}/shared/tmp/puma/pid"
 
 namespace :deploy do
   task :restart do
