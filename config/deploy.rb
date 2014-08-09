@@ -9,6 +9,8 @@ set(:run_method) { use_sudo ? :sudo : :run }
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
+default_run_options[:shell] = '/bin/bash --login'
+
 set :user, "deployer"
 set :group, user
 set :runner, user
